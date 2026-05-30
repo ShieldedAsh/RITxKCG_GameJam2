@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d31a0d4324803d428d1e8c6d7a1be67, type: 3}
+  m_Name: Wave1Data
+  m_EditorClassIdentifier: Assembly-CSharp::WaveData
+  waveEnemyCreateDatas:
+  - enemyType: {fileID: 8976265033945077997, guid: e7304a5e2e6502a4f8bcabf504fd8c98, type: 3}
+    createRatio: 50
+    createMin: 3
+  - enemyType: {fileID: 3258242600325333466, guid: 3a08a9867fa7074449f4899d14fc9456, type: 3}
+    createRatio: 30
+    createMin: 1
+  - enemyType: {fileID: 6035016425714875992, guid: 7c9e1f3f68715c44fb8d588a0adb2f28, type: 3}
+    createRatio: 20
+    createMin: 0
+  waveStartTime: 0
+  waveFinishTime: 20
+  waveEvenyCreateTimeMin: 5
+  waveEvenyCreateTimeMax: 7
+  waveEvenyCreateCountMin: 5
+  waveEvenyCreateCountMax: 8
