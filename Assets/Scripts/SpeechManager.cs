@@ -22,6 +22,7 @@ public class SpeechManager : MonoBehaviour
 
     private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {    
+        //debug
         StringBuilder builder = new StringBuilder();
         builder.AppendFormat("{0} ({1}){2}", args.text, args.confidence, Environment.NewLine);
         builder.AppendFormat("\tTimestamp: {0}{1}", args.phraseStartTime, Environment.NewLine);
