@@ -299,10 +299,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 796470158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27808a042457b2f42b3e9a7a87aba942, type: 3}
+  m_Script: {fileID: 11500000, guid: 0817110f638dde34e8e924ac947c01eb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Wave
+  m_EditorClassIdentifier: Assembly-CSharp::FinalWave
   waveData: {fileID: 11400000, guid: de1d6ad67ee336e4399f77c5245a4587, type: 2}
+  addTimer: 20
 --- !u!1 &836801381
 GameObject:
   m_ObjectHideFlags: 0

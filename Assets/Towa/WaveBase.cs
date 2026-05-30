@@ -17,7 +17,7 @@ public class Wave : MonoBehaviour
     private float finishTime;
 
     // 生成フラグ
-    private bool isCreating;
+    protected bool isCreating;
 
     // 最後に生成した時間
     private float lastCreateTime;
@@ -26,13 +26,12 @@ public class Wave : MonoBehaviour
     private WaveEnemyCreateData[] enemyCreateData;
 
     // 敵生成数
-    private int createCountMax;
-    private int createCountMin;
+    protected int createCountMax;
+    protected int createCountMin;
 
     // 敵生距離
     private int createLangeMin;
     private int createLangeMax;
-
 
     // 敵の現在生成数
     private int createCount;
@@ -43,6 +42,9 @@ public class Wave : MonoBehaviour
 
     // 次の生成間隔
     private float nextCreateTime;
+
+    // 追加の敵生成数
+    private int addEnemyCreate;
 
     // タイマー
     private Timer timer;
@@ -72,6 +74,7 @@ public class Wave : MonoBehaviour
         createLangeMax = waveData.WaveEvenyCreateLangeMax;
         createLangeMin = waveData.WaveEvenyCreateLangeMin;
         isCreating = false;
+        addEnemyCreate = 0;
 
         // 初期確立をセット
         createCount = Random.Range(createCountMin, createCountMax);
@@ -120,7 +123,7 @@ public class Wave : MonoBehaviour
     /// <summary>
     /// 生成フラグの更新
     /// </summary>
-    void UpdateCreateFlag()
+    private void UpdateCreateFlag()
     {
         if (timer.GetCurrentTime() <= finishTime && timer.GetCurrentTime() >= startTime)
         {
@@ -136,7 +139,7 @@ public class Wave : MonoBehaviour
     private void CreateAllWaveEnemy()
     {
         
-        createCount = Random.Range(createCountMin, createCountMax + 1);
+        createCount = Random.Range(createCountMin,createCountMax + 1);
 
         // 最低保証を引いた敵の生成数
         int createEnemyCount = createCount;
@@ -177,17 +180,26 @@ public class Wave : MonoBehaviour
 
 
 
-
+    /// <summary>
+    /// 生成座標の生成
+    /// </summary>
+    /// <returns></returns>
     public Vector2 CreateCreatePos()
     {
         float rad = Random.Range(0, 359) * Mathf.Deg2Rad;
         float cos = Mathf.Cos(rad);
         float sin = Mathf.Sin(rad);
-        float lange = Random.Range(createLangeMin, createTimerMax);
+        float lange = Random.Range(createLangeMin, createLangeMax);
         Vector2 pos = new Vector2(sin * lange, cos * lange);
         return pos;
     }
 
+    /// <summary>
+    /// 敵の生成
+    /// </summary>
+    /// <param name="type">敵のタイプ</param>
+    /// <param name="pos">生成座標</param>
+    /// <returns>生成した敵</returns>
     public EnemyBase CreateEnemy(EnemyBase type, Vector2 pos)
     {
         var obj = Instantiate(type, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
