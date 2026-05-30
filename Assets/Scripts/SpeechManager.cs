@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 
@@ -10,10 +11,12 @@ public class SpeechManager : MonoBehaviour
 
     private KeywordRecognizer m_Recognizer;
 
+    [SerializeField]private Attacks attacks;
+
     void Start()
     {
         //keywords to be recognized, add japanese ones later
-        m_Keywords = new string[] { "boom", "zap", "blaze", "slash", "whoosh", "spring"}; 
+        m_Keywords = new string[] { "boom", "zap", "blaze", "slash", "whoosh", "spring", "‚Ç‚©‚ñ","‚Ñ‚è‚Ñ‚è","‚ß‚ç‚ß‚ç","‚·‚Ï‚·‚Ï","‚«‚ã‚¢‚ñ","‚É‚å‚«‚É‚å‚«"}; 
         m_Recognizer = new KeywordRecognizer(m_Keywords, ConfidenceLevel.Low); //low confidence to be more forgiving
         m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
         m_Recognizer.Start();
@@ -32,23 +35,29 @@ public class SpeechManager : MonoBehaviour
         //Different attacks
         switch(args.text)
         {
+            case "‚Ç‚©‚ñ":
             case "boom":
-                Attacks.LaunchAttack(Attack.Boom);
+                attacks.LaunchAttack(AttackType.MeraMera);
                 break;
+            case "‚Ñ‚è‚Ñ‚è":
             case "zap":
-                Attacks.LaunchAttack(Attack.Zap);
+                attacks.LaunchAttack(AttackType.BiriBiri);
                 break;
+            case "‚ß‚ç‚ß‚ç":
             case "blaze":
-                Attacks.LaunchAttack(Attack.Blaze);
+                attacks.LaunchAttack(AttackType.MeraMera);
                 break;
+            case "‚·‚Ï‚·‚Ï":
             case "slash":
-                Attacks.LaunchAttack(Attack.Slash);
+                attacks.LaunchAttack(AttackType.SupaSups);
                 break;
+            case "‚«‚ã‚¢‚ñ":
             case "whoosh":
-                Attacks.LaunchAttack(Attack.Whoosh);
+                attacks.LaunchAttack(AttackType.kyuin);
                 break;
-            case "Spring":
-                Attacks.LaunchAttack(Attack.Spring);
+            case "‚É‚å‚«‚É‚å‚«":
+            case "spring":
+                attacks.LaunchAttack(AttackType.nyokinyoki);
                 break;
         }
     }

@@ -56,6 +56,7 @@ public class Wave : MonoBehaviour
     // 確率の合計
     int raitoAll = 0;
 
+    // 生成位置のオフセット
     Vector2 offsetPos = new Vector2(0,-4);
 
     /// <summary>

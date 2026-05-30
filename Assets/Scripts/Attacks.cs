@@ -2,16 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public enum Attack
-{
-    Boom,
-    Zap,
-    Blaze,
-    Slash,
-    Whoosh,
-    Spring
-};
-
 public class Attacks : MonoBehaviour
 {
     //camera ref
@@ -30,8 +20,20 @@ public class Attacks : MonoBehaviour
     {
 
     }
+    public void LaunchAttack(AttackType attackType)
+    {
+        Vector3 mouse = Mouse.current.position.ReadValue();
+        Vector3 world = cam.ScreenToWorldPoint(
+            new Vector3(mouse.x, mouse.y, 10f)
+        );
 
-    public static void LaunchAttack(Attack attackType)
+        Debug.Log($"{attackType} launched at world {world}");
+        // アタックを生成
+        AttackManager.Instance.CreateAttack(attackType, world);
+    }
+
+    /*
+    public void LaunchAttack(Attack attackType)
     {
         mousePos = Mouse.current.position.ReadValue();
         
@@ -57,4 +59,6 @@ public class Attacks : MonoBehaviour
                 break;
         }
     }
+    */
+    
 }
