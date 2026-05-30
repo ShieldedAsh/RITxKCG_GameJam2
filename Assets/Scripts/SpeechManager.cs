@@ -1,6 +1,3 @@
-//DO NOT USE, USE DICTATIONMANAGER.CS
-//使用しないでください。DICTATIONMANAGER.CSを使用してください。
-
 using System;
 using System.Text;
 using UnityEngine;
