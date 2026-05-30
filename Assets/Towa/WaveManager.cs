@@ -1,23 +1,54 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // ウェーブ
+    [Header("ウェーブを入れる")]
+    [SerializeField]private List<Wave> waves = new List<Wave>();
+    
+    /// <summary>
+    /// 全てのウェーブを初期化
+    /// </summary>
     void Start()
     {
-        
+        foreach (var wave in waves)
+        {
+            wave.Initialize();
+        }
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// 全てのウェーブを更新
+    /// </summary>
     void Update()
     {
-        
+        foreach (var wave in waves)
+        {
+            wave.MyUpdate();
+        }
+    }
+
+    /// <summary>
+    /// タイマーの停止
+    /// </summary>
+    public void StopWaveTimer()
+    {
+        foreach (var wave in waves)
+        {
+            wave.GetTimer.StopTimer();
+        }
+    }
+
+    /// <summary>
+    /// タイマーの開始
+    /// </summary>
+    public void StartWaveTimer()
+    {
+        foreach (var wave in waves)
+        {
+            wave.GetTimer.StartTimer();
+        }
     }
 }
-/*
-度の敵を出すか
-    敵の割合
-    何体出すか
-    出現確立
-    固定とらんだ
-*/

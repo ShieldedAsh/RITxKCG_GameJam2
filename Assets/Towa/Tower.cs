@@ -17,7 +17,6 @@ public class Tower : MonoBehaviour
     void Start()
     {
         Initialize();
-
     }
     /// <summary>
     ///  ‰Šú‰»
