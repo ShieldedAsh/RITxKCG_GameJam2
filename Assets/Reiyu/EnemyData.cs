@@ -46,6 +46,25 @@ public class EnemyData : ScriptableObject
     [Header("ジャコ"), SerializeField]
     private CommonEnemyData jacoData;
     public CommonEnemyData JacoData { get => jacoData; }
+
+    [Space(10)]
+    [Header("共通処理")]
+
+    [Header("やけど時間"), SerializeField]
+    private float burnTime;
+    public float BurnTime { get => burnTime; }
+
+    [Header("やけどダメージ"), SerializeField]
+    private int burnDamage;
+    public int BurnDamage { get => burnDamage; }
+
+    [Header("やけどダメージ間隔"), SerializeField]
+    private float burnSpacing;
+    public float BurnSpacing { get => burnSpacing; }
+
+    [Header("痺れ時間"), SerializeField]
+    private float numbTime;
+    public float NumbTime { get => numbTime; }
 }
 
 [Serializable]
