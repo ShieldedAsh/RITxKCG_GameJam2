@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7321104877646930650}
   - component: {fileID: 5077927592238835294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6111206965034655396}
   - component: {fileID: 6038714499704361745}
   - component: {fileID: -1617426606200174135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

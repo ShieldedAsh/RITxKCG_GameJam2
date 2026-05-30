@@ -24,6 +24,8 @@ public class AttackManager : MonoBehaviour
     [SerializeField]
     private AttackEntry[] attackEntries;
 
+    [SerializeField] private int asasa;
+
     //インスタンス
     private static AttackManager instance;
     public static AttackManager Instance { get { return instance; } }
@@ -60,6 +62,7 @@ public class AttackManager : MonoBehaviour
                 attack.MyUpdate();
         }
 
+        asasa = attacks.Count;
         if (destroyFlagObject)
             DestoryFlagObjects();
     }

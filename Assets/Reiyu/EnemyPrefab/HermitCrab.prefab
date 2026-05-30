@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8264650319436801141}
   - component: {fileID: 3625865005961230068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2397857541843409678}
   - component: {fileID: 320350436123929439}
   - component: {fileID: 8383347125116319284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HermitCrab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

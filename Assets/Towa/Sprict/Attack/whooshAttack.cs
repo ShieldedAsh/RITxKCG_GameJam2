@@ -9,6 +9,7 @@ public class WhooshAttack : AttackBase
         Damage = attackdata.NomalAttackDataWhoosh.Damage;
         Size = attackdata.NomalAttackDataWhoosh.Size;
         DestroyTimer = attackdata.NomalAttackDataWhoosh.DestroyTime;
+        transform.localScale = new Vector3(Size, Size, Size);
     }
     public override void MyUpdate()
     {

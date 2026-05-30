@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 530956134543096619}
   - component: {fileID: 5052003155589739754}
   - component: {fileID: 4454387367709784631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793684044674459706}
   - component: {fileID: 1317322654178130518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
