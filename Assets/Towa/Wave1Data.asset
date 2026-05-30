@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Wave1Data
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   waveEnemyCreateDatas:
-  - enemyType: {fileID: 8976265033945077997, guid: e7304a5e2e6502a4f8bcabf504fd8c98, type: 3}
+  - enemyType: {fileID: 348668233585925482, guid: 95f93a716e09eaf4e84ca27529fd15ac, type: 3}
     createRatio: 50
     createMin: 3
-  - enemyType: {fileID: 3258242600325333466, guid: 3a08a9867fa7074449f4899d14fc9456, type: 3}
+  - enemyType: {fileID: 6111206965034655396, guid: 81a2bea91a19d2a4bad137eeb1daaeb6, type: 3}
     createRatio: 30
     createMin: 1
-  - enemyType: {fileID: 6035016425714875992, guid: 7c9e1f3f68715c44fb8d588a0adb2f28, type: 3}
+  - enemyType: {fileID: 2184600851383753788, guid: d901038a434e00a419b577f2d6ba5253, type: 3}
     createRatio: 20
     createMin: 0
   waveStartTime: 0
