@@ -56,6 +56,8 @@ public class Wave : MonoBehaviour
     // Šm—¦‚Ì‡Œv
     int raitoAll = 0;
 
+    Vector2 offsetPos = new Vector2(0,-4);
+
     /// <summary>
     /// ‰Šú‰»ˆ—
     /// </summary>
@@ -186,7 +188,7 @@ public class Wave : MonoBehaviour
     /// <returns></returns>
     public Vector2 CreateCreatePos()
     {
-        float rad = Random.Range(0, 359) * Mathf.Deg2Rad;
+        float rad = Random.Range(-90, 90) * Mathf.Deg2Rad;
         float cos = Mathf.Cos(rad);
         float sin = Mathf.Sin(rad);
         float lange = Random.Range(createLangeMin, createLangeMax);
@@ -202,7 +204,7 @@ public class Wave : MonoBehaviour
     /// <returns>¶¬‚µ‚½“G</returns>
     public EnemyBase CreateEnemy(EnemyBase type, Vector2 pos)
     {
-        var obj = Instantiate(type, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+        var obj = Instantiate(type, new Vector3(pos.x + offsetPos.x, pos.y + offsetPos.y, 0), Quaternion.identity);
 
         obj.Initialize();
 

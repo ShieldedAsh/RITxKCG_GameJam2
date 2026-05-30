@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
     // 最大HP
     private int maxHp;
     // 現在HP
-    private int hp;
+    [SerializeField]private int hp;
 
     // 塔の画像変換クラス
     [Header("画像変更クラス")]
@@ -24,7 +24,7 @@ public class Tower : MonoBehaviour
     private void Initialize()
     {
         //タワーの体力を初期化
-        hp = statu.TowerMaxHp;
+        maxHp = statu.TowerMaxHp;
         hp = maxHp;
     }
 

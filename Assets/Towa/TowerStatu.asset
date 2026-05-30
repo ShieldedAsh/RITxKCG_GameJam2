@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerStatu
   towerMaxHp: 5000
   towerHanders:
-  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    battleValue: 1000
-  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    battleValue: 2000
-  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    battleValue: 3000
-  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    battleValue: 4000
-  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  - sprite: {fileID: -6754239384357436178, guid: 61f63961f89a3d643be938de6397fa0f, type: 3}
     battleValue: 5000
+  - sprite: {fileID: -4725890255406111666, guid: 89b3126699124a641826141ef8eaaeb4, type: 3}
+    battleValue: 4000
+  - sprite: {fileID: -2695925568758139339, guid: df1b5995d2bae48479e79bf80495ec8d, type: 3}
+    battleValue: 3000
+  - sprite: {fileID: 774957010610295967, guid: 0157ae860efad4142aaa110b537cf9b6, type: 3}
+    battleValue: 2000
+  - sprite: {fileID: -8088128221445767352, guid: 6db624953a7623549b142231663ecfd0, type: 3}
+    battleValue: 1000

@@ -21,6 +21,7 @@ public class TowerImageChanger : MonoBehaviour
     private void Initialize()
     {
         hpHander = statu.TowerSpriteHandlers;
+        UpdateSprite(statu.TowerMaxHp);
     }
 
     /// <summary>
