@@ -5,9 +5,11 @@ using UnityEngine;
 /// <summary>
 /// ウェーブクラス
 /// </summary>
-public class Wave : MonoBehaviour
+[System.Serializable]
+public class Wave
 {
     // ウェーブのごとのデータ
+    [Header("ウェーブのスプリクタブルオブジェクトデータ")]
     [SerializeField] WaveData waveData;
     // スタート時間
     private float startTime;
@@ -114,7 +116,7 @@ public class Wave : MonoBehaviour
     /// </summary>
     void UpdateCreateFlag()
     {
-        if (timer.GetCurrentTime() <= finishTime || timer.GetCurrentTime() >= startTime)
+        if (timer.GetCurrentTime() <= finishTime && timer.GetCurrentTime() >= startTime)
         {
             isCreating = true;
             return;
@@ -128,7 +130,7 @@ public class Wave : MonoBehaviour
     private void CreateAllWaveEnemy()
     {
         
-        createCount = Random.Range(createCountMin, createCountMax);
+        createCount = Random.Range(createCountMin, createCountMax + 1);
 
         // 最低保証を引いた敵の生成数
         int createEnemyCount = createCount;
@@ -148,7 +150,7 @@ public class Wave : MonoBehaviour
         for (int i = 0; i < createEnemyCount; i++)
         {
             // 生成された乱数
-            int enemyRand = Random.Range(0, raitoAll);
+            int enemyRand = Random.Range(0, raitoAll + 1);
             // 闘値の合計
             int battleValueSum = 0;
             for (int j = 0; j < enemyCreateData.Count(); j++)
@@ -169,6 +171,6 @@ public class Wave : MonoBehaviour
 
     private void CreateEnemy(EnemyBaseAsasa type)
     {
-        Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
+        //Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
     }
 }
