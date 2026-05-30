@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebaa825871a9e0441a0d7978e7ab6470, type: 3}
   m_Name: TowerStatu
   m_EditorClassIdentifier: Assembly-CSharp::TowerStatu
-  towerMaxHp: 0
+  towerMaxHp: 5000
   towerHanders:
+  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    battleValue: 1000
   - sprite: {fileID: 0}
-    battleValue: 0
-  - sprite: {fileID: 0}
-    battleValue: 0
-  - sprite: {fileID: 0}
-    battleValue: 0
+    battleValue: 2000
+  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    battleValue: 3000
+  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    battleValue: 4000
+  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    battleValue: 5000

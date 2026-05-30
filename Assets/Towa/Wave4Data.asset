@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: Wave4Data
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   waveEnemyCreateDatas:
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 348668233585925482, guid: 95f93a716e09eaf4e84ca27529fd15ac, type: 3}
     createRatio: 40
     createMin: 6
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 6111206965034655396, guid: 81a2bea91a19d2a4bad137eeb1daaeb6, type: 3}
     createRatio: 20
     createMin: 0
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 2184600851383753788, guid: d901038a434e00a419b577f2d6ba5253, type: 3}
     createRatio: 14
     createMin: 0
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 2397857541843409678, guid: 535ec16d614dcaa48b375d23d30b10ac, type: 3}
     createRatio: 10
     createMin: 0
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 530956134543096619, guid: 7a74f1aea2a10e54680d87395e60e773, type: 3}
     createRatio: 8
     createMin: 0
-  - enemyType: {fileID: 0}
+  - enemyType: {fileID: 5511895450004161627, guid: 4181bb2a552b0df47b7fedc34c6e0b7e, type: 3}
     createRatio: 8
     createMin: 0
   waveStartTime: 80

@@ -5,8 +5,7 @@ using UnityEngine;
 /// <summary>
 /// ウェーブクラス
 /// </summary>
-[System.Serializable]
-public class Wave 
+public class Wave : MonoBehaviour
 {
     // ウェーブのごとのデータ
     [Header("ウェーブのスプリクタブルオブジェクトデータ")]
@@ -169,8 +168,12 @@ public class Wave
 
 
 
-    private void CreateEnemy(EnemyBaseAsasa type)
+    public EnemyBase CreateEnemy(EnemyBase type)
     {
-        //Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
+        var obj = Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
+
+        obj.Initialize();
+
+        return obj;
     }
 }
