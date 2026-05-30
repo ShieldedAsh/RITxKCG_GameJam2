@@ -6,19 +6,33 @@ public class Jaco : EnemyBase
     public override void Initialize()
     {
         base.Initialize();
+
+        //‰E‘¤‚È‚ç‰æ‘œ‚ð”½“]‚·‚é
+        if (tower.transform.position.x < transform.position.x)
+        {
+            var scale = imageObj.transform.localScale;
+            scale.y *= -1;
+            imageObj.transform.localScale = scale;
+        }
+
+        imageRotOffset = 90;
     }
 
     public override void SelfUpdate()
     {
         if (tower == null) return;
 
-        if(Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
+        base.SelfUpdate();
+
+        if (isNumb == true) return;
+
+        if (Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
         {
             Attack();
         }
         else
         {
             Move();
-        }        
+        }
     }
 }

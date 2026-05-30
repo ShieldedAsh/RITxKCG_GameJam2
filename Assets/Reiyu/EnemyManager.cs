@@ -16,6 +16,8 @@ public class EnemyManager : MonoBehaviour
     /// </summary>
     private List<EnemyBase> enemies = new List<EnemyBase>();
 
+    private List<Egg> eggs = new List<Egg>();
+
     private void Awake()
     {
         instance = this;
@@ -23,9 +25,25 @@ public class EnemyManager : MonoBehaviour
 
     public void Update()
     {
-        foreach (EnemyBase enemy in enemies)
+        for (int i = 0; i < enemies.Count; i++)
         {
-            enemy.SelfUpdate();
+            if (enemies[i] == null)
+            {
+                enemies.RemoveAt(i);
+                continue;
+            }
+            enemies[i].SelfUpdate();
+        }
+
+        for (int i = 0; i < eggs.Count; i++)
+        {
+            if (eggs[i] == null)
+            {
+                eggs.RemoveAt(i);
+                continue;
+            }
+
+            eggs[i].SelfUpdate();
         }
     }
 
@@ -34,4 +52,11 @@ public class EnemyManager : MonoBehaviour
         enemies.Add(enemy);
         enemy.AddTower(tower);
     }
+
+
+    public void AddEgg(Egg egg)
+    {
+        eggs.Add(egg);
+    }
+
 }

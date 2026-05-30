@@ -3,7 +3,7 @@ using UnityEngine;
 public class Egg : MonoBehaviour
 {
     [Header("子供ウミガメのプレハブ"), SerializeField]
-    private EnemyBase seaturtleBabyPrefab;
+    private GameObject seaturtleBabyPrefab;
 
     /// <summary>
     /// 生まれる時間
@@ -17,15 +17,16 @@ public class Egg : MonoBehaviour
     public void Initialize(float time)
     {
         layTime = time;
+        EnemyManager.Instance.AddEgg(this);
     }
 
     public void SelfUpdate()
     {
         timer += Time.deltaTime;
-        if(timer >= layTime)
+        if (timer >= layTime)
         {
-            EnemyBase baby = Instantiate(seaturtleBabyPrefab, transform.position, Quaternion.identity);
-            baby.Initialize();
+            GameObject baby = Instantiate(seaturtleBabyPrefab, transform.position, Quaternion.identity);
+            baby.GetComponent<EnemyBase>().Initialize();
             Destroy(gameObject);
         }
     }
