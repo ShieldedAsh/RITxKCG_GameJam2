@@ -37,7 +37,7 @@ public class Seaturtle : EnemyBase
     {
 
         timer += Time.deltaTime;
-        if(target != null && Vector3.Distance(transform.position, target.position) <= AttackArea)
+        if(tower != null && Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
         {
             Attack();
         }
