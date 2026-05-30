@@ -34,5 +34,5 @@ MonoBehaviour:
   waveEvenyCreateTimeMax: 6
   waveEvenyCreateCountMin: 8
   waveEvenyCreateCountMax: 12
-  waveEvenyCreateLangeMin: 20
+  waveEvenyCreateLangeMin: 15
   waveEvenyCreateLangeMax: 25
