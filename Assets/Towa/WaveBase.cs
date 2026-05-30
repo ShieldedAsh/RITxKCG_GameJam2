@@ -6,7 +6,7 @@ using UnityEngine;
 /// ウェーブクラス
 /// </summary>
 [System.Serializable]
-public class Wave
+public class Wave 
 {
     // ウェーブのごとのデータ
     [Header("ウェーブのスプリクタブルオブジェクトデータ")]
@@ -53,7 +53,7 @@ public class Wave
     /// <summary>
     /// 初期化処理
     /// </summary>
-    public void Initialize()
+    virtual public void Initialize()
     {
         // 初期化
         timer = new Timer();
@@ -82,7 +82,7 @@ public class Wave
     /// <summary>
     /// 自身の更新処理
     /// </summary>
-    public void MyUpdate()
+    virtual public void MyUpdate()
     {
         timer.UpdateTick();
         UpdateCreateFlag();
