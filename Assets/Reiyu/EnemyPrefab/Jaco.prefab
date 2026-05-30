@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 348668233585925482}
   - component: {fileID: 6422172063292673523}
   - component: {fileID: -6845148787562085960}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jaco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5199374793082896687}
   - component: {fileID: 7761541738778049229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

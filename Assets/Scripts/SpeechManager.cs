@@ -37,7 +37,7 @@ public class SpeechManager : MonoBehaviour
         {
             case "‚Ç‚©‚ñ":
             case "boom":
-                attacks.LaunchAttack(AttackType.MeraMera);
+                attacks.LaunchAttack(AttackType.Dokan);
                 break;
             case "‚Ñ‚è‚Ñ‚è":
             case "zap":

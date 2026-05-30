@@ -41,7 +41,15 @@ MonoBehaviour:
     attackInterval: 1
     attackArea: 1
   seaturtleLayEggs: 1
+  seaturtleLaySpacing: 3
   seaturtleHatchingSpacing: 3
+  seaturtleBabyData:
+    size: 1
+    hp: 100
+    power: 10
+    moveSpeed: 1
+    attackInterval: 1
+    attackArea: 1
   hermitCrabData:
     size: 1
     hp: 100
@@ -58,3 +66,7 @@ MonoBehaviour:
     moveSpeed: 1
     attackInterval: 1
     attackArea: 1
+  burnTime: 5
+  burnDamage: 10
+  burnSpacing: 0.5
+  numbTime: 5

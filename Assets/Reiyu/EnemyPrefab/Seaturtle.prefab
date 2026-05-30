@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6849951669703195222}
   - component: {fileID: 7443127423578031498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5511895450004161627}
   - component: {fileID: 9007447244826606821}
   - component: {fileID: -5505467773351962323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Seaturtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
