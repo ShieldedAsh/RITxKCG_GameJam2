@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
+  m_Name: Hermit Crab.fadeMotionList
+  m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Framework.MotionFade.CubismFadeMotionList
+  MotionInstanceIds: 9e0fffff740fffff580fffff3c0fffff
+  CubismFadeMotionObjects:
+  - {fileID: 11400000, guid: b4faec05a3788364d95528cafc65b067, type: 2}
+  - {fileID: 11400000, guid: a54c11ea1eb8fdd4bb291c685d856363, type: 2}
+  - {fileID: 11400000, guid: 2e636bf449a769d48b4919f76d8aa0de, type: 2}
+  - {fileID: 11400000, guid: 77af09ebb54c98046804366881a44754, type: 2}
