@@ -252,11 +252,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288501090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5291c08e079bb41ba919ed0963ab28, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b54cff0c738a2a44acaab33d9e9e44c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DictationManager
-  m_Hypotheses: {fileID: 0}
-  m_Recognitions: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SpeechManager
+  m_Keywords: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
