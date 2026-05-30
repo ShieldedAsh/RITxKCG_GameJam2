@@ -170,7 +170,7 @@ public class Wave : MonoBehaviour
 
     public EnemyBase CreateEnemy(EnemyBase type)
     {
-        var obj = Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
+        var obj = Instantiate(type, new Vector3(0, 10, 0), Quaternion.identity);
 
         obj.Initialize();
 

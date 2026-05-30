@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Jaco : EnemyBase
@@ -9,7 +10,9 @@ public class Jaco : EnemyBase
 
     public override void SelfUpdate()
     {
-        if(tower != null && Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
+        if (tower == null) return;
+
+        if(Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
         {
             Attack();
         }
