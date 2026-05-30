@@ -8,6 +8,9 @@ public class EnemyManager : MonoBehaviour
     private static EnemyManager instance;
     public static EnemyManager Instance { get { return instance; } }
 
+    [SerializeField]
+    private Tower tower;
+
     /// <summary>
     /// ¶¬Œã‚Ì“G‚ÌƒŠƒXƒg
     /// </summary>
@@ -18,14 +21,9 @@ public class EnemyManager : MonoBehaviour
         instance = this;
     }
 
-    public void Initialize()
+    public void Update()
     {
-
-    }
-
-    public void SelfUpdate()
-    {
-        foreach(EnemyBase enemy in enemies)
+        foreach (EnemyBase enemy in enemies)
         {
             enemy.SelfUpdate();
         }
@@ -34,5 +32,6 @@ public class EnemyManager : MonoBehaviour
     public void AddEnemy(EnemyBase enemy)
     {
         enemies.Add(enemy);
+        enemy.AddTower(tower);
     }
 }

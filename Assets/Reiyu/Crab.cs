@@ -9,7 +9,7 @@ public class Crab : EnemyBase
 
     public override void SelfUpdate()
     {
-        if(tower != null && Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
+        if(tower != null && Mathf.Abs(Vector3.Distance(transform.position, tower.transform.position)) <= AttackArea)
         {
             Attack();
         }
