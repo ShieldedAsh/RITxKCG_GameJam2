@@ -16,12 +16,11 @@ public class TowerImageChanger : MonoBehaviour
     void Start()
     {
         Initialize();
-
     }
 
     private void Initialize()
     {
-
+        hpHander = statu.TowerSpriteHandlers;
     }
 
     /// <summary>

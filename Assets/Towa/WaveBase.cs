@@ -29,6 +29,11 @@ public class Wave : MonoBehaviour
     private int createCountMax;
     private int createCountMin;
 
+    // 敵生距離
+    private int createLangeMin;
+    private int createLangeMax;
+
+
     // 敵の現在生成数
     private int createCount;
 
@@ -64,6 +69,8 @@ public class Wave : MonoBehaviour
         createCountMin = waveData.WaveEvenyCreateCountMin;
         createTimerMax = waveData.WaveEvenyCreateTimeMax;
         createTimerMin = waveData.WaveEvenyCreateTimeMin;
+        createLangeMax = waveData.WaveEvenyCreateLangeMax;
+        createLangeMin = waveData.WaveEvenyCreateLangeMin;
         isCreating = false;
 
         // 初期確立をセット
@@ -139,7 +146,7 @@ public class Wave : MonoBehaviour
             //最低保証を生成
             for (int i = 0; i < enemyData.createMin; i++)
             {
-                CreateEnemy(enemyData.enemyType);
+                CreateEnemy(enemyData.enemyType, CreateCreatePos());
 
                 //その分確率の生成数を減らす
                 createEnemyCount--;
@@ -157,20 +164,33 @@ public class Wave : MonoBehaviour
                 battleValueSum += enemyCreateData[j].createRatio;
                 if (battleValueSum >= enemyRand)
                 {
-                    CreateEnemy(enemyCreateData[j].enemyType);
+
+                    CreateEnemy(enemyCreateData[j].enemyType, CreateCreatePos());
                     break;
                 }
             }
         }
     }
         
+    // EnemyCreatorに移行したい
         
 
 
 
-    public EnemyBase CreateEnemy(EnemyBase type)
+
+    public Vector2 CreateCreatePos()
     {
-        var obj = Instantiate(type, new Vector3(0, 10, 0), Quaternion.identity);
+        float rad = Random.Range(0, 359) * Mathf.Deg2Rad;
+        float cos = Mathf.Cos(rad);
+        float sin = Mathf.Sin(rad);
+        float lange = Random.Range(createLangeMin, createTimerMax);
+        Vector2 pos = new Vector2(sin * lange, cos * lange);
+        return pos;
+    }
+
+    public EnemyBase CreateEnemy(EnemyBase type, Vector2 pos)
+    {
+        var obj = Instantiate(type, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
 
         obj.Initialize();
 

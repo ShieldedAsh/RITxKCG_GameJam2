@@ -16,7 +16,7 @@ MonoBehaviour:
   towerHanders:
   - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     battleValue: 1000
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     battleValue: 2000
   - sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     battleValue: 3000

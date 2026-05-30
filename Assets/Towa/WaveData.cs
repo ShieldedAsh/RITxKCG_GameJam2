@@ -28,4 +28,9 @@ public class WaveData : ScriptableObject
     [SerializeField] private int waveEvenyCreateCountMax;
     public int WaveEvenyCreateCountMax { get { return waveEvenyCreateCountMax; } }
 
+    [Header("ウェーブの敵生成距離")]
+    [SerializeField] private int waveEvenyCreateLangeMin;
+    public int WaveEvenyCreateLangeMin { get { return waveEvenyCreateLangeMin; } }
+    [SerializeField] private int waveEvenyCreateLangeMax;
+    public int WaveEvenyCreateLangeMax { get { return waveEvenyCreateLangeMax; } }
 }
