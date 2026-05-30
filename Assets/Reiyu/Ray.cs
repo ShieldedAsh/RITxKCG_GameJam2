@@ -9,7 +9,13 @@ public class Ray : EnemyBase
 
     public override void SelfUpdate()
     {
-        if(tower != null && Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
+        if (tower == null) return;
+
+        base.SelfUpdate();
+
+        if (isNumb == true) return;
+
+        if (Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
         {
             Attack();
         }

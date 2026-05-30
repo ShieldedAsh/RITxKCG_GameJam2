@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public enum EnemyKind
 {
@@ -32,7 +33,7 @@ public enum EnemyKind
     SEATURTLEBABY,
 }
 
-public abstract class EnemyBase : MonoBehaviour
+public class EnemyBase : MonoBehaviour
 {
     [Header("敵データ"), SerializeField]
     protected EnemyData enemyData;
@@ -40,18 +41,36 @@ public abstract class EnemyBase : MonoBehaviour
     [Header("敵の種類"), SerializeField]
     protected EnemyKind kind;
 
+    protected GameObject imageObj;
+    protected float imageRotOffset;
 
-    public float Size { get; private set; }
-    public int HP{ get;set; }
+    public int HP { get; set; }
     public int Power { get; private set; }
     public float MoveSpeed { get; private set; }
     public float AttackInterval { get; private set; }
     public float AttackArea { get; private set; }
 
+    protected float attackTimer;
+
     /// <summary>
     /// 塔
     /// </summary>
     protected Tower tower;
+
+    /// <summary>
+    /// 痺れている
+    /// </summary>
+    protected bool isNumb;
+    protected float numbTimer;
+
+    /// <summary>
+    /// やけどしている
+    /// </summary>
+    protected bool isBurn;
+    protected int burnDamage;           //やけどダメージ
+    protected float burnSpacing;        //やけどダメージ間隔
+    protected float burnTimer;          //やけど時間計測
+    protected int burnDamageNum;      //ダメージ回数
 
     /// <summary>
     /// 初期化
@@ -91,33 +110,69 @@ public abstract class EnemyBase : MonoBehaviour
                 break;
         }
 
-        Size = data.Size;
+        //ステータス初期化
+        transform.localScale *= data.Size;
         HP = data.HP;
         Power = data.Power;
         MoveSpeed = data.MoveSpeed;
         AttackInterval = data.AttackInterval;
-        AttackArea = data.AttackArea;  
+        AttackArea = data.AttackArea;
+        //一回目は近づいたら攻撃できるようにしておく
+        attackTimer = AttackInterval;
+
+        //状態異常初期化
+        isNumb = false;
+        numbTimer = 0;
+        isBurn = false;
+        burnTimer = 0;
+        burnDamage = enemyData.BurnDamage;
+        burnSpacing = enemyData.BurnSpacing;
+        burnDamageNum = (int)(enemyData.BurnTime / burnSpacing);
+
+        imageObj = transform.GetChild(0).gameObject;
+        imageRotOffset = 0;
     }
 
     /// <summary>
     /// 更新処理
     /// </summary>
-    public abstract void SelfUpdate();
+    public virtual void SelfUpdate()
+    {
+        attackTimer += Time.deltaTime;
+
+        if (isBurn)
+        {
+            BurnUpdate();
+        }
+
+        if (isNumb)
+        {
+            NumbUpdate();
+        }
+    }
 
     /// <summary>
     /// 移動
     /// </summary>
-    public void Move()
+    protected void Move()
     {
+        Vector2 dir = tower.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        imageObj.transform.rotation = Quaternion.Euler(0, 0, angle - 90 + imageRotOffset);
+
         transform.position = Vector3.MoveTowards(transform.position, tower.transform.position, MoveSpeed * Time.deltaTime);
     }
 
     /// <summary>
     /// 攻撃
     /// </summary>
-    public void Attack()
+    protected void Attack()
     {
-        tower.TakeDamage(Power);
+        if (attackTimer > AttackInterval)
+        {
+            tower.TakeDamage(Power);
+            attackTimer = 0;
+        }
     }
 
     /// <summary>
@@ -126,7 +181,7 @@ public abstract class EnemyBase : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         HP -= damage;
-        if(HP <= 0)
+        if (HP <= 0)
         {
             Destroy(gameObject);
         }
@@ -135,5 +190,54 @@ public abstract class EnemyBase : MonoBehaviour
     public void AddTower(Tower _tower)
     {
         tower = _tower;
+    }
+
+    protected void BurnUpdate()
+    {
+        burnTimer += Time.deltaTime;
+
+        //やけどダメージ間隔を過ぎたらダメージを受ける
+        if (burnTimer > burnSpacing)
+        {
+            TakeDamage(burnDamage);
+            burnDamageNum--;
+            burnTimer = 0;
+            //やけどダメージ回数が終了したらやけど状態を解除する
+            if (burnDamageNum <= 0)
+            {
+                isBurn = false;
+                return;
+            }
+        }
+    }
+
+    protected void NumbUpdate()
+    {
+        numbTimer += Time.deltaTime;
+
+        //痺れ時間が終了したら痺れ状態を解除する
+        if (numbTimer >= enemyData.NumbTime)
+        {
+            isNumb = false;
+            numbTimer = 0;
+        }
+    }
+
+    /// <summary>
+    /// やけど状態にする
+    /// </summary>
+    public void CauseBurn()
+    {
+        isBurn = true;
+        burnTimer = 0;
+    }
+
+    /// <summary>
+    /// 痺れ状態にする
+    /// </summary>
+    public void CauseNumb()
+    {
+        isNumb = true;
+        numbTimer = 0;
     }
 }
