@@ -3,7 +3,7 @@ using UnityEngine;
 public class WaveEnemyCreateData
 {
     [Header("“G‚Ìí—Ş")]
-    public EnemyBase enemyType;
+    public EnemyBaseAsasa enemyType;
     [Header("“G‚ÌoŒ»—¦(%)")]
     public int createRatio;
     [Header("“G‚Ì¶¬Å’á•ÛØ")]

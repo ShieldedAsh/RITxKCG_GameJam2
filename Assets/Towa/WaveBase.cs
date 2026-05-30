@@ -167,7 +167,7 @@ public class Wave : MonoBehaviour
 
 
 
-    private void CreateEnemy(EnemyBase type)
+    private void CreateEnemy(EnemyBaseAsasa type)
     {
         Instantiate(type, new Vector3(0, 1, 0), Quaternion.identity);
     }
