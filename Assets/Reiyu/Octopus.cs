@@ -9,7 +9,7 @@ public class Octopus : EnemyBase
 
     public override void SelfUpdate()
     {
-        if(target != null && Vector3.Distance(transform.position, target.position) <= AttackArea)
+        if (tower != null && Vector3.Distance(transform.position, tower.transform.position) <= AttackArea)
         {
             Attack();
         }

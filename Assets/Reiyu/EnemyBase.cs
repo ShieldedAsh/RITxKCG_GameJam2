@@ -19,17 +19,17 @@ public enum EnemyKind
     /// </summary>
     SEATURTLE,
     /// <summary>
-    /// 子供ウミガメ
-    /// </summary>
-    SEATURTLEBABY,
-    /// <summary>
     /// ヤドカリ
     /// </summary>
     HERMITCRAB,
     /// <summary>
     /// ジャコ
     /// </summary>
-    JACO
+    JACO,
+    /// <summary>
+    /// 子供ウミガメ
+    /// </summary>
+    SEATURTLEBABY,
 }
 
 public abstract class EnemyBase : MonoBehaviour
@@ -47,17 +47,19 @@ public abstract class EnemyBase : MonoBehaviour
     public float MoveSpeed { get; private set; }
     public float AttackInterval { get; private set; }
     public float AttackArea { get; private set; }
-    
+
     /// <summary>
-    /// ターゲット
+    /// 塔
     /// </summary>
-    protected Transform target;
+    protected Tower tower;
 
     /// <summary>
     /// 初期化
     /// </summary>
     public virtual void Initialize()
     {
+        EnemyManager.Instance.AddEnemy(this);
+
         CommonEnemyData data;
 
         //種類に合わせてデータを設定
@@ -107,7 +109,7 @@ public abstract class EnemyBase : MonoBehaviour
     /// </summary>
     public void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, MoveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, tower.transform.position, MoveSpeed * Time.deltaTime);
     }
 
     /// <summary>
@@ -115,7 +117,7 @@ public abstract class EnemyBase : MonoBehaviour
     /// </summary>
     public void Attack()
     {
-
+        tower.TakeDamage(Power);
     }
 
     /// <summary>
@@ -128,5 +130,10 @@ public abstract class EnemyBase : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void AddTower(Tower _tower)
+    {
+        tower = _tower;
     }
 }
