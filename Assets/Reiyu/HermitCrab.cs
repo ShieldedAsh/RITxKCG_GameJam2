@@ -37,9 +37,9 @@ public class HermitCrab : EnemyBase
         //¶‘¤‚È‚ç‰æ‘œ‚ð”½“]‚·‚é
         if (tower.transform.position.x > transform.position.x)
         {
-            //var scale = imageObj.transform.localScale;
-            //scale.y *= -1;
-            //imageObj.transform.localScale = scale;
+            var scale = transform.localScale;
+            scale.y *= -1;
+            transform.localScale = scale;
         }
         imageRotOffset = -90;
     }

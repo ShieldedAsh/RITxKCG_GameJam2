@@ -886,8 +886,8 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: -4.783081, y: -1.3488581, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _offsetScale: {x: 0, y: 0, z: 2, w: 2}
+  _quaternion: {x: 0, y: 0, z: 1, w: 0}
   _zOffset: 0
 --- !u!33 &1580264371732658466
 MeshFilter:
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: -4.783081, y: -1.3488581, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _offsetScale: {x: 0, y: 0, z: 2, w: 2}
+  _quaternion: {x: 0, y: 0, z: 1, w: 0}
   _zOffset: -0.00001
 --- !u!33 &6814167056533833695
 MeshFilter:
@@ -2327,8 +2327,8 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: -4.783081, y: -1.3488581, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _offsetScale: {x: 0, y: 0, z: 2, w: 2}
+  _quaternion: {x: 0, y: 0, z: 1, w: 0}
   _zOffset: -0.00002
 --- !u!33 &5145957944426861315
 MeshFilter:
@@ -2375,7 +2375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6718856126531937695}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
@@ -2384,7 +2384,7 @@ Transform:
   - {fileID: 2025619427219325709}
   - {fileID: 1953919145792474841}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &7520249823153279895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Rendering.CubismRenderController
   Opacity: 1
-  _lastOpacity: 0
+  _lastOpacity: 1
   _isOverriddenModelMultiplyColors: 0
   _isOverriddenModelScreenColors: 0
   _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
