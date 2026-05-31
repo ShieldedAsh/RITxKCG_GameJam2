@@ -22,16 +22,16 @@ MonoBehaviour:
   octopusData:
     size: 0.5
     hp: 60
-    power: 10
+    power: 20
     moveSpeed: 0.7
-    attackInterval: 1
-    attackArea: 1
+    attackInterval: 2
+    attackArea: 2
   rayData:
     size: 0.5
-    hp: 60
-    power: 10
-    moveSpeed: 1
-    attackInterval: 1
+    hp: 70
+    power: 15
+    moveSpeed: 0.8
+    attackInterval: 1.5
     attackArea: 1
   seaturtleData:
     size: 0.5
@@ -41,19 +41,19 @@ MonoBehaviour:
     attackInterval: 1
     attackArea: 1
   seaturtleLayEggs: 1
-  seaturtleLaySpacing: 3
+  seaturtleLaySpacing: 5
   seaturtleHatchingSpacing: 3
   seaturtleBabyData:
     size: 0.3
     hp: 30
-    power: 10
-    moveSpeed: 1
+    power: 5
+    moveSpeed: 0.8
     attackInterval: 1
     attackArea: 1
   hermitCrabData:
     size: 0.5
     hp: 100
-    power: 10
+    power: 15
     moveSpeed: 0.8
     attackInterval: 1
     attackArea: 1

@@ -35,5 +35,5 @@ MonoBehaviour:
   whooshPower: 0.0003
   nomalAttackDataSpring:
     size: 3
-    damage: 15
-    destroyTime: 9
+    damage: 20
+    destroyTime: 5
