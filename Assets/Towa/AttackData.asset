@@ -15,7 +15,7 @@ MonoBehaviour:
   nomalAttackDataBoom:
     size: 3
     damage: 60
-    destroyTime: 1
+    destroyTime: 2.2
   nomalAttackDataZap:
     size: 7
     damage: 0
