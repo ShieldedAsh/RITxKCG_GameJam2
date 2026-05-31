@@ -103,7 +103,7 @@ public class OnomatopeManager : MonoBehaviour
 
     public OnomatopeBase CreateOnomatope(OnomatopeBase type,Vector2 createPos)
     {
-        var obj = Instantiate(type, new Vector3(createPos.x, createPos.y, 0), Quaternion.identity);
+        var obj = Instantiate(type, new Vector3(createPos.x, createPos.y, -0.5f), Quaternion.identity);
         Register(obj);
         obj.Initialize();
 
