@@ -5,8 +5,7 @@ using UnityEngine;
 /// <summary>
 /// ウェーブクラス
 /// </summary>
-public class Wave : MonoBehaviour
-{
+public class Wave : MonoBehaviour{
     // ウェーブのごとのデータ
     [Header("ウェーブのスプリクタブルオブジェクトデータ")]
     [SerializeField] WaveData waveData;
