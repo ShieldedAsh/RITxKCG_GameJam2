@@ -38,5 +38,9 @@ public class Tower : MonoBehaviour
 
         // スプライトの更新
         changer.UpdateSprite(hp);
+        if(hp <= 0)
+        {
+            SceneSwitcher.LoadScene("ResultsScene");
+        }
     }
 }
