@@ -33,8 +33,8 @@ MonoBehaviour:
     createMin: 1
   waveStartTime: 50
   waveFinishTime: 80
-  waveEvenyCreateTimeMin: 4
-  waveEvenyCreateTimeMax: 6
+  waveEvenyCreateTimeMin: 5
+  waveEvenyCreateTimeMax: 7
   waveEvenyCreateCountMin: 10
   waveEvenyCreateCountMax: 13
   waveEvenyCreateLangeMin: 15
