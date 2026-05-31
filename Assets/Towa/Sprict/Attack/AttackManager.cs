@@ -108,8 +108,8 @@ public class AttackManager : MonoBehaviour
         foreach (var attack in attacks)
         {
             if (attack != null)
-            if (attack.DestroyFlag)
-                Destroy(attack.gameObject);
+                if (attack.DestroyFlag)
+                    Destroy(attack.gameObject);
         }
 
         attacks.RemoveAll(a => a.DestroyFlag);
