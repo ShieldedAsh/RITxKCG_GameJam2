@@ -190,8 +190,8 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: 0
 --- !u!33 &4775218446699770680
 MeshFilter:
@@ -1640,9 +1640,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00004
 --- !u!33 &3815128162748369828
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2105,9 +2105,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00005
 --- !u!33 &6848922210061651575
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2369,9 +2369,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00002
 --- !u!33 &4387439510843528441
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2663,6 +2663,9 @@ GameObject:
   - component: {fileID: 259135480390272734}
   - component: {fileID: 4206599330794092647}
   - component: {fileID: 1057300628416562284}
+  - component: {fileID: 2248848049111119739}
+  - component: {fileID: 3273040853785507305}
+  - component: {fileID: 154351914237953007}
   m_Layer: 0
   m_Name: kame
   m_TagString: Untagged
@@ -2739,7 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Rendering.CubismRenderController
   Opacity: 1
-  _lastOpacity: 0
+  _lastOpacity: 1
   _isOverriddenModelMultiplyColors: 0
   _isOverriddenModelScreenColors: 0
   _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2827,7 +2830,7 @@ Animator:
   m_GameObject: {fileID: 7081830432267821971}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b79b144fc96fa344992285958a5c7aeb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2852,6 +2855,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Framework.MotionFade.CubismFadeController
   CubismFadeMotionList: {fileID: 0}
+--- !u!114 &2248848049111119739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081830432267821971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ae920cb1ccdf049adbc72b3d2a991c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seaturtle
+  enemyData: {fileID: 11400000, guid: 4b76dd1cff835f740a48e3208847b0ab, type: 2}
+  kind: 3
+  eggPrefab: {fileID: 2032549182082933515, guid: 17918b29a9e8b6e41abb55180cb53a68, type: 3}
+--- !u!58 &3273040853785507305
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081830432267821971}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3
+--- !u!50 &154351914237953007
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081830432267821971}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7105832766227344744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,9 +3444,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00001
 --- !u!33 &2921089873015615662
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3973,9 +4054,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: 3.4504027, y: -1.3435934, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00003
 --- !u!33 &3629727931555228824
 MeshFilter:
   m_ObjectHideFlags: 0
