@@ -597,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeechManager
   m_Keywords:
   - 
+  attacks: {fileID: 639502387}
 --- !u!4 &1348173727
 Transform:
   m_ObjectHideFlags: 0
@@ -604,6 +605,64 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348173725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608493249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608493251}
+  - component: {fileID: 1608493250}
+  m_Layer: 0
+  m_Name: AttackManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1608493250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608493249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66d57e8971113640ba8441b11c0d000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackManager
+  attackEntries:
+  - type: 0
+    prefab: {fileID: 1715860631893108288, guid: 280779e88e39ee748bac9e39d6ffb0ba, type: 3}
+  - type: 1
+    prefab: {fileID: 1393696664068242038, guid: 4a25a3aeef6b9474b9e2735030b3f8ea, type: 3}
+  - type: 2
+    prefab: {fileID: 5429314919330549016, guid: a3d1fc5bca247aa41b99994ef4c68561, type: 3}
+  - type: 3
+    prefab: {fileID: 7257968433085978087, guid: b21beeb0918646741a886d2aae245b0f, type: 3}
+  - type: 4
+    prefab: {fileID: 7056152949532478978, guid: 1ae4f60b9ee416f40bcbd51a361ba236, type: 3}
+  - type: 5
+    prefab: {fileID: 8445852644238339626, guid: 87b047ddca926604b9a0a18d87243e28, type: 3}
+  asasa: 0
+--- !u!4 &1608493251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608493249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -869,3 +928,4 @@ SceneRoots:
   - {fileID: 639502388}
   - {fileID: 1183067920}
   - {fileID: 1706028908}
+  - {fileID: 1608493251}
