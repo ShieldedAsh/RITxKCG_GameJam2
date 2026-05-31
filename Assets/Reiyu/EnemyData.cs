@@ -90,7 +90,7 @@ public class CommonEnemyData
     private float attackInterval = 1;
     public float AttackInterval { get => attackInterval; }
 
-    [Tooltip("UŒ‚‰Â”\‹——£"), SerializeField]
+    [Tooltip("UŒ‚‰Â”‹——£"), SerializeField]
     private float attackArea = 1;
     public float AttackArea { get => attackArea; }
 }

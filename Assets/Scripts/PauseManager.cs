@@ -30,9 +30,10 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         Time.timeScale = 1f;
+        pauseMenuUI.SetActive(false);
         Debug.Log("Unpaused");
         IsPaused = false;
     }
@@ -40,6 +41,7 @@ public class PauseManager : MonoBehaviour
     void Pause()
     {
         IsPaused = true;
+        pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Debug.Log("Paused");
     }

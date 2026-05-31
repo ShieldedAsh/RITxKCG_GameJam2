@@ -16,7 +16,10 @@ public class Button : MonoBehaviour
             case "Settings":
                 break;
             case "Play":
-                SceneSwitcher.LoadScene("GameScene");
+                SceneSwitcher.LoadScene("MainScene");
+                break;
+            case "Menu":
+                SceneSwitcher.LoadScene("MainMenuEN");
                 break;
         }
     }
