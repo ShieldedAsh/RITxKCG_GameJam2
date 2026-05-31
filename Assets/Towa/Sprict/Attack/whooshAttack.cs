@@ -20,9 +20,9 @@ public class WhooshAttack : AttackBase
 
     protected override void OnEnemyStay(EnemyBase enemy)
     {
-        Rigidbody2D enemyRb2 = enemy.GetComponent<Rigidbody2D>();
+        Transform enemyTf = enemy.transform;
 
-        Vector2 dir = (transform.position - enemy.transform.position).normalized;
-        enemyRb2.AddForce(dir * whooshPower, ForceMode2D.Force);
+        Vector2 dir = (transform.position - enemyTf.position).normalized;
+        enemyTf.position += (Vector3)(dir * whooshPower * Time.deltaTime);
     }
 }
