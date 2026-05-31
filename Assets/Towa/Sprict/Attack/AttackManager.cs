@@ -74,6 +74,7 @@ public class AttackManager : MonoBehaviour
     /// <returns>インスタンス</returns>
     public AttackBase CreateAttack(AttackType attackTyoe,Vector3 pos)
     {
+        OnomatopeManager.Instance.CreateOnomatope(attackTyoe, pos);
         var attack = Instantiate(attackPrefab[attackTyoe]);
         attack.transform.position = pos;
         Register(attack);

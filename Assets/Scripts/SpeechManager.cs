@@ -3,9 +3,11 @@ using System.Text;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
+using static UnityEngine.Rendering.GPUSort;
 
 public class SpeechManager : MonoBehaviour
 {
+    public string asasa;
     [SerializeField]
     private string[] m_Keywords;
 
