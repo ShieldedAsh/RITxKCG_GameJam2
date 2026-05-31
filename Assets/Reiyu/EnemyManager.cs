@@ -11,6 +11,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]
     private Tower tower;
 
+    // エネミークリエイター
+    [SerializeField]
+    private EnemyCreator[] enemyCreators;
+    public EnemyCreator[] EnemyCreators {  get { return enemyCreators; } }
+
     /// <summary>
     /// 生成後の敵のリスト
     /// </summary>

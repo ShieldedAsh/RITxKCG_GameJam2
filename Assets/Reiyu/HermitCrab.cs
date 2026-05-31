@@ -6,6 +6,7 @@ public class HermitCrab : EnemyBase
     /// Šk‚É‚±‚à‚éŠÔ
     /// </summary>
     private float invincibleTime = 0;
+
     /// <summary>
     /// Šk‚É‚±‚à‚éŠÔŠu
     /// </summary>
@@ -15,6 +16,7 @@ public class HermitCrab : EnemyBase
     /// Œo‰ßŠÔ
     /// </summary>
     private float timer = 0;
+
     /// <summary>
     /// Šk‚É‚±‚à‚Á‚Ä‚¢‚éŠÔ
     /// </summary>

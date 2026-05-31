@@ -16,7 +16,7 @@ public class SpeechManager : MonoBehaviour
     void Start()
     {
         //keywords to be recognized, add japanese ones later
-        m_Keywords = new string[] { "boom", "zap", "blaze", "slash", "whoosh", "spring", "‚Ç‚©‚ñ","‚Ñ‚è‚Ñ‚è","‚ß‚ç‚ß‚ç","‚·‚Ï‚·‚Ï","‚«‚ã‚¢‚ñ","‚É‚å‚«‚É‚å‚«"}; 
+        m_Keywords = new string[] { "boom", "zap", "blaze", "slash", "whoosh", "spring", "‚Ç‚©‚ñ","‚Ñ‚è‚Ñ‚è","‚ß‚ç‚ß‚ç","‚·‚Ï‚·‚Ï","‚«‚ã‚¢‚ñ","‚É‚å‚«‚É‚å‚«","dokan","biribiri","meramera","supasupa","kyuin","nyokinyoki"}; 
         m_Recognizer = new KeywordRecognizer(m_Keywords, ConfidenceLevel.Low); //low confidence to be more forgiving
         m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
         m_Recognizer.Start();
@@ -37,26 +37,32 @@ public class SpeechManager : MonoBehaviour
         {
             case "‚Ç‚©‚ñ":
             case "boom":
+            case "dokan":
                 attacks.LaunchAttack(AttackType.Dokan);
                 break;
             case "‚Ñ‚è‚Ñ‚è":
             case "zap":
+            case "biribiri":
                 attacks.LaunchAttack(AttackType.BiriBiri);
                 break;
             case "‚ß‚ç‚ß‚ç":
             case "blaze":
+            case "meramera":
                 attacks.LaunchAttack(AttackType.MeraMera);
                 break;
             case "‚·‚Ï‚·‚Ï":
             case "slash":
+            case "supasupa":
                 attacks.LaunchAttack(AttackType.SupaSups);
                 break;
             case "‚«‚ã‚¢‚ñ":
             case "whoosh":
+            case "kyuin":
                 attacks.LaunchAttack(AttackType.kyuin);
                 break;
             case "‚É‚å‚«‚É‚å‚«":
             case "spring":
+            case "nyokinyoki":
                 attacks.LaunchAttack(AttackType.nyokinyoki);
                 break;
         }

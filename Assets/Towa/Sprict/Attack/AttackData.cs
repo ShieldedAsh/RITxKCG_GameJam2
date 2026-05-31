@@ -52,7 +52,7 @@ public class NomalAttackData
 
     [Header("è¡Ç¶ÇÈÇ‹Ç≈ÇÃïbêî")]
     [SerializeField]
-    private float destroyTime;
+    private float destroyTime;  
     public float DestroyTime { get => destroyTime; }
     /*
     [Tooltip("É^ÉCÉv")]
