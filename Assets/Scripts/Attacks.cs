@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using static UnityEditor.PlayerSettings;
 
 public class Attacks : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class Attacks : MonoBehaviour
         Debug.Log($"{attackType} launched at world {world}");
         // アタックを生成
         AttackManager.Instance.CreateAttack(attackType, world);
+        OnomatopeManager.Instance.CreateOnomatope(attackType, world);
     }
 
     /*
