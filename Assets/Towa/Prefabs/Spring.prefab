@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2192757888726240537}
   - component: {fileID: 8445852644238339626}
   - component: {fileID: -6933882228392382197}
-  - component: {fileID: 3505725570670691137}
   m_Layer: 6
   m_Name: Spring
   m_TagString: Untagged
@@ -32,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5289256788129351058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2192757888726240537
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4600433385921770066, guid: 7a58d5d88494ac14ab70d6037d5224e6, type: 3}
+  m_Sprite: {fileID: -5753539512315865723, guid: a4443c47443333f46bf6d52ed5b58f5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,14 +146,88 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!95 &3505725570670691137
+--- !u!1001 &3155924241071853109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8494749724237771062}
+    m_Modifications:
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.702
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.623
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270660888421665864, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8988811934457366172, guid: 252e51a451144314f8fd3e30b3fa0c4c, type: 3}
+    - target: {fileID: 8558090601077244440, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      propertyPath: m_Name
+      value: SpringOnomatope
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8558090601077244440, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3523984813848375052}
+  m_SourcePrefab: {fileID: 100100000, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+--- !u!4 &5289256788129351058 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7109828552696515495, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+  m_PrefabInstance: {fileID: 3155924241071853109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6703725071521827885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8558090601077244440, guid: 9219f51b57a082d4ca34e330bd059df9, type: 3}
+  m_PrefabInstance: {fileID: 3155924241071853109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3523984813848375052
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8161323149068799700}
+  m_GameObject: {fileID: 6703725071521827885}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 03f485e7447c9fb4abe3dc03957f0d90, type: 2}
