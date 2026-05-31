@@ -104,4 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da43ca5a411de94408e75aacc6dd6dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Egg
-  seaturtleBabyPrefab: {fileID: 2415746859120866524, guid: c9657ce405cab5d4bb412edaf9c7ed60, type: 3}
+  seaturtleBabyPrefab: {fileID: 8385738182099201041, guid: 4f7b25b5528b98546a6722a648e6b34d, type: 3}
