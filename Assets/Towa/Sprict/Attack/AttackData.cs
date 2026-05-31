@@ -28,6 +28,8 @@ public class AttackData : ScriptableObject
     [SerializeField]
     private NomalAttackData nomalAttackDataWhoosh;
     public NomalAttackData NomalAttackDataWhoosh { get { return nomalAttackDataWhoosh; } }
+    [SerializeField]private float whooshPower;
+    public float WhooshPower { get { return whooshPower; } }
 
     [Header("�ɂ傫�ɂ傫")]
     [SerializeField]
