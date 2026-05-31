@@ -17,11 +17,18 @@ public class Tower : MonoBehaviour
     private Timer timer;
 
     public static float lastTime;
+
+    public float time;
     void Start()
     {
         timer = new Timer();
         timer.Initialize();
         Initialize();
+    }
+
+    private void Update()
+    {
+        timer.UpdateTick();
     }
     /// <summary>
     ///  初期化
@@ -40,12 +47,13 @@ public class Tower : MonoBehaviour
     public void TakeDamage(int damage) 
     {
         hp -= damage;
-
+        time = timer.GetCurrentTime();
         // スプライトの更新
         changer.UpdateSprite(hp);
         if(hp <= 0)
         {
-            lastTime = timer.GetCurrentTime();
+
+            lastTime = time;
             SceneSwitcher.LoadScene("ResultsScene");
         }
     }
