@@ -41,8 +41,10 @@ public class EnemyBase : MonoBehaviour
     [Header("敵の種類"), SerializeField]
     protected EnemyKind kind;
 
-    protected GameObject imageObj;
     protected float imageRotOffset;
+
+    //アニメータ
+    protected Animator animator;
 
     public int HP { get; set; }
     public int Power { get; private set; }
@@ -120,6 +122,8 @@ public class EnemyBase : MonoBehaviour
         //一回目は近づいたら攻撃できるようにしておく
         attackTimer = AttackInterval;
 
+        animator = GetComponent<Animator>();
+
         //状態異常初期化
         isNumb = false;
         numbTimer = 0;
@@ -129,7 +133,6 @@ public class EnemyBase : MonoBehaviour
         burnSpacing = enemyData.BurnSpacing;
         burnDamageNum = (int)(enemyData.BurnTime / burnSpacing);
 
-        imageObj = transform.GetChild(0).gameObject;
         imageRotOffset = 0;
     }
 
@@ -158,7 +161,7 @@ public class EnemyBase : MonoBehaviour
     {
         Vector2 dir = tower.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        imageObj.transform.rotation = Quaternion.Euler(0, 0, angle - 90 + imageRotOffset);
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90 + imageRotOffset);
 
         transform.position = Vector3.MoveTowards(transform.position, tower.transform.position, MoveSpeed * Time.deltaTime);
     }
@@ -170,6 +173,7 @@ public class EnemyBase : MonoBehaviour
     {
         if (attackTimer > AttackInterval)
         {
+            animator.Play("Attack");
             tower.TakeDamage(Power);
             attackTimer = 0;
         }

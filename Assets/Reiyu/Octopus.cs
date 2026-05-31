@@ -5,6 +5,8 @@ public class Octopus : EnemyBase
     public override void Initialize()
     {
         base.Initialize();
+
+        imageRotOffset = 180;
     }
 
     public override void SelfUpdate()

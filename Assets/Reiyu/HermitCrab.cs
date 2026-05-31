@@ -37,9 +37,9 @@ public class HermitCrab : EnemyBase
         //ç∂ë§Ç»ÇÁâÊëúÇîΩì]Ç∑ÇÈ
         if (tower.transform.position.x > transform.position.x)
         {
-            var scale = imageObj.transform.localScale;
+            var scale = transform.localScale;
             scale.y *= -1;
-            imageObj.transform.localScale = scale;
+            transform.localScale = scale;
         }
         imageRotOffset = -90;
     }
@@ -58,13 +58,6 @@ public class HermitCrab : EnemyBase
             invincibleTimer += Time.deltaTime;
             if (invincibleTimer >= invincibleTime)
             {
-                //êFñﬂÇµ
-                var renderer = imageObj.GetComponent<SpriteRenderer>();
-                if (renderer != null)
-                {
-                    renderer.color = Color.white;
-                }
-
                 isInvincible = false;
                 invincibleTimer = 0;
             }
@@ -75,13 +68,6 @@ public class HermitCrab : EnemyBase
         timer += Time.deltaTime;
         if (timer >= invincibleSpacing)
         {
-            //êFë÷Ç¶
-            var renderer = imageObj.GetComponent<SpriteRenderer>();
-            if (renderer != null)
-            {
-                renderer.color = Color.blue;
-            }
-
             isInvincible = true;
             timer = 0;
         }

@@ -104,4 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f862cbc167b7c44a3ec70552569bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnomatopeBase
-  onomatopeData: {fileID: 11400000, guid: 565a75c16112e394d899df2ef193d5cb, type: 2}
+  onomatopeData: {fileID: 11400000, guid: 29e1d75cdea2aef4e940b6b68021c6d0, type: 2}
