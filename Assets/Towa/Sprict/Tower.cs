@@ -14,8 +14,13 @@ public class Tower : MonoBehaviour
     [Header("‰æ‘œ•ÏXƒNƒ‰ƒX")]
     [SerializeField] private TowerImageChanger changer;
 
+    private Timer timer;
+
+    public static float lastTime;
     void Start()
     {
+        timer = new Timer();
+        timer.Initialize();
         Initialize();
     }
     /// <summary>
@@ -40,6 +45,7 @@ public class Tower : MonoBehaviour
         changer.UpdateSprite(hp);
         if(hp <= 0)
         {
+            lastTime = timer.GetCurrentTime();
             SceneSwitcher.LoadScene("ResultsScene");
         }
     }
