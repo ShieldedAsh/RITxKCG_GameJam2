@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10f96b1e2c016f047a2fbdcec55f682a, type: 3}
-  m_Name: OnomatopeData
+  m_Name: OnomatopeDataSpring
   m_EditorClassIdentifier: Assembly-CSharp::OnomatopeData
   size: 0.5
   destroyTime: 2

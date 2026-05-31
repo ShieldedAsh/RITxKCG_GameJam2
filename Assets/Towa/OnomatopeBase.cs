@@ -13,6 +13,11 @@ public class OnomatopeBase : MonoBehaviour
     private float destroyTimer;
     public float DestroyTimer { get { return destroyTimer; } set { destroyTimer = value; } }
 
+    private Vector3 offSetPos;
+    public Vector3 OffsetPos { get { return offSetPos; } }
+
+    private SpriteRenderer render;
+
     // タイマー
     protected Timer timer;
 
@@ -21,12 +26,18 @@ public class OnomatopeBase : MonoBehaviour
     /// </summary>
     virtual public void Initialize()
     {
+        render = GetComponent<SpriteRenderer>();
         timer = new Timer();
         timer.Initialize();
         DestroyFlag = false;
         Size = onomatopeData.Size;
+        offSetPos = onomatopeData.OffseyPos;
         destroyTimer = onomatopeData.DestroyTime;
-
+        transform.position += OffsetPos;
+        transform.localScale = new Vector3(Size, Size, Size);
+        var c = render.color;
+        c.a = 0f;
+        render.color = c;
     }
 
 
@@ -37,7 +48,22 @@ public class OnomatopeBase : MonoBehaviour
     {
         timer.UpdateTick();
 
-        if (destroyTimer <= timer.GetCurrentTime())
+        var c = render.color;
+        float a = c.a;
+
+        if (DestroyTimer <= timer.GetCurrentTime())
+        {
+                a -= 5f * Time.deltaTime;
+        }
+        else
+        {
+                a += 5f * Time.deltaTime;
+        }
+
+        c.a = Mathf.Clamp01(a);
+        render.color = c;
+
+        if (c.a <= 0f)
         {
             OnomatopeManager.Instance.Unregister(this);
         }
