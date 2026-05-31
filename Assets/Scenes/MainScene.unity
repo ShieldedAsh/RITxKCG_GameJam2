@@ -1823,6 +1823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610807890}
   - component: {fileID: 1610807889}
+  - component: {fileID: 1610807891}
   m_Layer: 0
   m_Name: Background_0
   m_TagString: Untagged
@@ -1904,6 +1905,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610807891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610807888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ee021d862afdb4dbc221ac3f20ced9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Rendering.URP.RenderingInterceptor.CubismRenderingInterceptController
+  InvokeTimingSetting: 0
+  Mode: 0
+  GroupSortingOrder: 0
+  SortingOrder: 0
+  _targetArtMesh: {fileID: 0}
 --- !u!1 &1642717765
 GameObject:
   m_ObjectHideFlags: 0
