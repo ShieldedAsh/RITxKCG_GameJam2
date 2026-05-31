@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   crabData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
     attackInterval: 1
     attackArea: 1
   octopusData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
     attackInterval: 1
     attackArea: 1
   rayData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
     attackInterval: 1
     attackArea: 1
   seaturtleData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
@@ -44,14 +44,14 @@ MonoBehaviour:
   seaturtleLaySpacing: 3
   seaturtleHatchingSpacing: 3
   seaturtleBabyData:
-    size: 1
+    size: 0.3
     hp: 100
     power: 10
     moveSpeed: 1
     attackInterval: 1
     attackArea: 1
   hermitCrabData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
   hermitCrabInvincibleTime: 2
   hermitCrabInvincibleSpacing: 5
   jacoData:
-    size: 1
+    size: 0.5
     hp: 100
     power: 10
     moveSpeed: 1
