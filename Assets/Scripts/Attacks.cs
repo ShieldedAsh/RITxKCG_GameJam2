@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
-using static UnityEditor.PlayerSettings;
 
 public class Attacks : MonoBehaviour
 {
