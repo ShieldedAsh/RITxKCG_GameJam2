@@ -795,8 +795,8 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: 0
 --- !u!33 &5803100527759591957
 MeshFilter:
@@ -1059,9 +1059,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00002
 --- !u!33 &4327338550814924260
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1323,9 +1323,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00006
 --- !u!33 &7463452892290236457
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1461,9 +1461,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00001
 --- !u!33 &8353151244748272982
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1599,9 +1599,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00003
 --- !u!33 &7951657603748932168
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1755,6 +1755,9 @@ GameObject:
   - component: {fileID: 4160947347585011149}
   - component: {fileID: 1891203443555215088}
   - component: {fileID: 5139744265923162607}
+  - component: {fileID: 1324574863530182975}
+  - component: {fileID: 4967810467672880604}
+  - component: {fileID: 2398282147957585103}
   m_Layer: 0
   m_Name: HermitCrab
   m_TagString: Untagged
@@ -1831,7 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Rendering.CubismRenderController
   Opacity: 1
-  _lastOpacity: 0
+  _lastOpacity: 1
   _isOverriddenModelMultiplyColors: 0
   _isOverriddenModelScreenColors: 0
   _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1917,7 +1920,7 @@ Animator:
   m_GameObject: {fileID: 4221166342772809422}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbc6d97fe6c0777419f3feb4c782bc8c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1942,6 +1945,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Framework.MotionFade.CubismFadeController
   CubismFadeMotionList: {fileID: 0}
+--- !u!114 &1324574863530182975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221166342772809422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eaa13b082ea81c4993baee3ad0a25f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HermitCrab
+  enemyData: {fileID: 11400000, guid: 4b76dd1cff835f740a48e3208847b0ab, type: 2}
+  kind: 4
+--- !u!58 &4967810467672880604
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221166342772809422}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3
+--- !u!50 &2398282147957585103
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221166342772809422}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4278752546917776748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,9 +2338,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00004
 --- !u!33 &3402499715081327528
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3312,9 +3392,9 @@ MonoBehaviour:
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
-  _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 0}
-  _zOffset: 0
+  _offsetScale: {x: -3.2700543, y: 1.0801785, z: 1, w: 1}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
+  _zOffset: -0.00005
 --- !u!33 &4996660224808786026
 MeshFilter:
   m_ObjectHideFlags: 0
