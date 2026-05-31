@@ -152,8 +152,7 @@ public class Wave : MonoBehaviour
             //最低保証を生成
             for (int i = 0; i < enemyData.createMin; i++)
             {
-                CreateEnemy(enemyData.enemyType, CreateCreatePos());
-
+                EnemyCreateRandom(enemyData.enemyType);
                 //その分確率の生成数を減らす
                 createEnemyCount--;
             }
@@ -170,45 +169,17 @@ public class Wave : MonoBehaviour
                 battleValueSum += enemyCreateData[j].createRatio;
                 if (battleValueSum >= enemyRand)
                 {
-
-                    CreateEnemy(enemyCreateData[j].enemyType, CreateCreatePos());
+                    EnemyCreateRandom(enemyCreateData[j].enemyType);
                     break;
                 }
             }
         }
     }
         
-    // EnemyCreatorに移行したい
+    private void EnemyCreateRandom(EnemyBase enemyType)
+    {
+        int rand = Random.Range(0, EnemyManager.Instance.EnemyCreators.Length);
         
-
-
-
-    /// <summary>
-    /// 生成座標の生成
-    /// </summary>
-    /// <returns></returns>
-    public Vector2 CreateCreatePos()
-    {
-        float rad = Random.Range(-90, 90) * Mathf.Deg2Rad;
-        float cos = Mathf.Cos(rad);
-        float sin = Mathf.Sin(rad);
-        float lange = Random.Range(createLangeMin, createLangeMax);
-        Vector2 pos = new Vector2(sin * lange, cos * lange);
-        return pos;
-    }
-
-    /// <summary>
-    /// 敵の生成
-    /// </summary>
-    /// <param name="type">敵のタイプ</param>
-    /// <param name="pos">生成座標</param>
-    /// <returns>生成した敵</returns>
-    public EnemyBase CreateEnemy(EnemyBase type, Vector2 pos)
-    {
-        var obj = Instantiate(type, new Vector3(pos.x + offsetPos.x, pos.y + offsetPos.y, 0), Quaternion.identity);
-
-        obj.Initialize();
-
-        return obj;
+        EnemyManager.Instance.EnemyCreators[rand].CreateEnemy(enemyType);
     }
 }
